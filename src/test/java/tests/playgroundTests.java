@@ -1,6 +1,7 @@
 package tests;
 
 import models.Form;
+import models.Planet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -74,6 +75,17 @@ public class playgroundTests {
         );
 
         Assertions.assertEquals("Thanks for your feedback Raissa Damasceno", driver.findElement(byPopUpMessage).getText());
+    }
+
+    @Test
+    public void planetTest() {
+
+        Planet planet = new Planet(driver);
+
+        planet.openPlanetPage();
+        planet.getPlanetCards();
+
+
     }
 
 
